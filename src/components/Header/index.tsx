@@ -14,7 +14,7 @@ export function Header() {
     <header>
       <nav>
         <div className="hidden md:flex">
-          <ul className="w-full flex justify-center space-x-32 py-10 bg-black/50 text-xl font-medium tracking-wide">
+          <ul className="w-full flex justify-center space-x-32 py-10 bg-black/40 text-xl font-medium tracking-wide border-b-2 border-white/80 rounded-bl-[100px] rounded-br-[100px]">
             {menuItems.map((li) => {
               const [hovered, setHovered] = useState(false);
               return (

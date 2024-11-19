@@ -2,10 +2,18 @@ import { motion, useCycle, AnimatePresence, MotionConfig } from "motion/react";
 
 import coordination from "../../assets/cordenadas.png";
 import eye from "../../assets/eye.png";
+import { useMenu } from "../../context/menuContext";
 
 export function Mobile() {
+  const { isMenuOpen, setIsMenuOpen } = useMenu()
+
   // Basicamente igual um useState onde ele deixa o toggle como false depois true
   const [mobileNav, toggleMobileNav] = useCycle(false, true);
+
+  function handleToggleMenu() {
+    toggleMobileNav()
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const menuItems = [
     { label: "About", href: "#about" },
@@ -16,10 +24,10 @@ export function Mobile() {
 
   return (
     <div className="top-0 h-16">
-      <div className="bg-black/60 md:bg-black/0 mx-auto h-full p-10 flex items-center justify-between">
+      <div className="bg-black/60 md:bg-black/0 mx-auto h-full p-10 flex items-center justify-between border-b-2 md:border-b-0 rounded-br-3xl">
         <div className="block md:hidden relative z-10">
           <motion.button
-            onClick={() => toggleMobileNav()}
+            onClick={handleToggleMenu}
             animate={mobileNav ? "open" : "close"}
             className="flex flex-col space-y-1"
           >
