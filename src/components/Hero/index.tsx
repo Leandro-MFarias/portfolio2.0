@@ -1,8 +1,9 @@
 import bedRoom from "../../assets/bedroom2.0.gif";
+
 import { useMenu } from "../../context/menuContext";
 import { Header } from "../Header";
-
 import { IoIosArrowDown } from "react-icons/io";
+import { motion } from "motion/react"
 
 export function Hero() {
   const { isMenuOpen } = useMenu();
@@ -26,9 +27,9 @@ export function Hero() {
         </div>
 
         {!isMenuOpen && (
-          <a href="#about" className="absolute left-[48%] bottom-12">
-            <IoIosArrowDown className="text-5xl" />
-          </a>
+          <motion.a href="#motion.about" animate={{ y: [0, 15, 0], opacity: [1, 0.5, 1]}} transition={{ repeat: Infinity, repeatType: "loop",ease: "easeInOut"}} className="absolute left-[48%] bottom-12">
+            <IoIosArrowDown className="text-4xl" />
+          </motion.a>
         )}
       </div>
     </section>
