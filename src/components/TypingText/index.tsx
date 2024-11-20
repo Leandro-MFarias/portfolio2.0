@@ -13,11 +13,11 @@ const mainFadeDuration = 0.25;
 const swapDelay = 3000;
 
 export function TypingText() {
-  const [indexExample, setIndexExample] = useState(0);
+  const [ secondary, setSecodary ] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndexExample((prev) => (prev + 1) % secondaryText.length);
+      setSecodary((prev) => (prev + 1) % secondaryText.length);
     }, swapDelay);
 
     return () => clearInterval(interval);
@@ -28,18 +28,13 @@ export function TypingText() {
       <p className="text-6xl font-semibold mr-20">
         {principalText.split("").map((letter, index) => (
           <motion.span
-            initial={{
-              opacity: 1,
-            }}
-            animate={{
-              opacity: 0,
-            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
-              delay: fadeDelay,
-              duration: mainFadeDuration,
-              ease: "easeInOut",
+              delay: index * letterDelay,
+              duration: 0,
             }}
-            key={`${indexExample}-${index}`}
+            key={index}
             className="relative"
           >
             <motion.span
@@ -90,7 +85,7 @@ export function TypingText() {
         ))}
       </p>
       <p className="flex items-center text-5xl self-end">
-        {secondaryText[indexExample].split("").map((letter, index) => (
+        {secondaryText[secondary].split("").map((letter, index) => (
           <motion.span
             initial={{
               opacity: 1,
@@ -103,7 +98,7 @@ export function TypingText() {
               duration: mainFadeDuration,
               ease: "easeInOut",
             }}
-            key={`${indexExample}-${index}`}
+            key={`${secondary}-${index}`}
             className="relative"
           >
             <motion.span
@@ -118,7 +113,7 @@ export function TypingText() {
                 duration: 0,
               }}
             >
-              {letter}
+              {letter === " " ? "\u00A0" : letter}
             </motion.span>
             <motion.span
               initial={{
