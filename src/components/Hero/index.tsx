@@ -3,7 +3,8 @@ import bedRoom from "../../assets/bedroom2.0.gif";
 import { useMenu } from "../../context/menuContext";
 import { Header } from "../Header";
 import { IoIosArrowDown } from "react-icons/io";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import { TypingText } from "../TypingText";
 
 export function Hero() {
   const { isMenuOpen } = useMenu();
@@ -19,15 +20,22 @@ export function Hero() {
       <Header />
 
       <div>
-        <div className="flex flex-col items-center justify-center h-[55vh]">
-          <div className="flex flex-col space-y-4">
-            <p className="text-6xl font-semibold">Hey, I'm Leandro Farias</p>
-            <p className="text-5xl self-end">FrontEnd Developer</p>
-          </div>
+        <div className="flex flex-col items-center justify-center h-[50vh] px-4">
+          <TypingText />
         </div>
 
         {!isMenuOpen && (
-          <motion.a href="#motion.about" animate={{ y: [0, 15, 0], opacity: [1, 0.5, 1]}} transition={{ repeat: Infinity, repeatType: "loop",ease: "easeInOut"}} className="absolute left-[48%] bottom-12">
+          <motion.a
+            href="#motion.about"
+            animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+            className="absolute left-[48%] bottom-12"
+          >
             <IoIosArrowDown className="text-4xl" />
           </motion.a>
         )}
