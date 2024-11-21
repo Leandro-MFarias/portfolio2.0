@@ -13,7 +13,7 @@ const mainFadeDuration = 0.25;
 const swapDelay = 3000;
 
 export function TypingText() {
-  const [ secondary, setSecodary ] = useState(0);
+  const [secondary, setSecodary] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {

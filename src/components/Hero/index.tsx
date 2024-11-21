@@ -26,7 +26,7 @@ export function Hero() {
 
         {!isMenuOpen && (
           <motion.a
-            href="#motion.about"
+            href="#about"
             animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
             transition={{
               duration: 2,
