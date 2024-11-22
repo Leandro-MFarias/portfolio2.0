@@ -34,7 +34,7 @@ export function About() {
       <img
         src={planet}
         alt=""
-        className="w-36 absolute -top-20 left-[760px] brightness-75"
+        className="w-36 absolute bottom-20 left-20 brightness-75"
       />
     </section>
   );
