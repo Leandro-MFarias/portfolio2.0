@@ -1,11 +1,10 @@
 import room from "../../assets/about-ia.jpg";
-import planet from "../../assets/gemeos-planet.png";
+import planet from "../../assets/quantum-moon.png";
 
 
 export function About() {
   return (
     <section id="about" className="h-[80vh] relative pb-10">
-      <img src={planet} alt="" className="w-60 absolute bottom-20 left-40 brightness-50"/>
 
       <div className="flex items-center justify-center space-x-8">
         <div className="space-y-10">
@@ -24,9 +23,11 @@ export function About() {
         <img
           src={room}
           alt="Image a man on Computer"
-          className="w-[540px] rounded-xl"
+          className="w-[560px] rounded-tr-[40%] rounded-bl-[40%]"
         />
       </div>
+
+      <img src={planet} alt="" className="w-44 absolute -top-20 left-[760px] brightness-50"/>
     </section>
   );
 }
