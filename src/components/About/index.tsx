@@ -1,13 +1,14 @@
 import room from "../../assets/about-ia.jpg";
 import planet from "../../assets/quantum-moon.png";
-
+import { Social } from "../Social";
 
 export function About() {
+
+
   return (
     <section id="about" className="h-[80vh] relative pb-10">
-
       <div className="flex items-center justify-center space-x-8">
-        <div className="space-y-10">
+        <div className="space-y-14">
           <h2 className="text-5xl font-bold">Sobre mim</h2>
           <p className="max-w-3xl text-xl leading-loose tracking-wider">
             Sou Desenvolvedor Frontend com foco em tecnologias como React.js,
@@ -19,6 +20,9 @@ export function About() {
             priorizam performance, acessibilidade e uma experiência de usuário
             responsiva.
           </p>
+
+          <Social />
+
         </div>
         <img
           src={room}
@@ -27,7 +31,11 @@ export function About() {
         />
       </div>
 
-      <img src={planet} alt="" className="w-44 absolute -top-20 left-[760px] brightness-50"/>
+      <img
+        src={planet}
+        alt=""
+        className="w-36 absolute -top-20 left-[760px] brightness-75"
+      />
     </section>
   );
 }
