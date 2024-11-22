@@ -6,7 +6,7 @@ export function About() {
 
 
   return (
-    <section id="about" className="h-[80vh] relative pb-10">
+    <section id="about" className="h-[80vh] relative pb-10 px-6">
       <div className="flex items-center justify-center space-x-8">
         <div className="space-y-14">
           <h2 className="text-5xl font-bold">Sobre mim</h2>

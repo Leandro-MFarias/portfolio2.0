@@ -7,7 +7,7 @@ export function Social() {
   const [hasCopied, setHasCopied] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
-  const email = "Leandrorf1606@gmail.com"
+  const email = "leandrorf1606@gmail.com"
   const socials = [
     { name: <FaGithubAlt />, link: "https://github.com/Leandro-MFarias" },
     {
@@ -35,7 +35,7 @@ export function Social() {
   const copied = hasCopied ? "Copied!" : "copy";
 
   return (
-    <div className="flex items-center pr-20 space-x-8 text-3xl">
+    <div className="flex items-center pr-20 space-x-8 text-3xl pl-6">
       {socials.map((social, index) => (
         <a
           href={social.link}
