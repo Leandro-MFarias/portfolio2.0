@@ -19,12 +19,12 @@ export function Hero() {
 
       <Header />
 
-      <div>
-        <div className="flex flex-col items-center justify-center h-[50vh] px-4">
-          <TypingText />
-        </div>
+      {!isMenuOpen && (
+        <div>
+          <div className="flex flex-col items-center justify-center h-[80vh] md:h-[50vh] px-6 md:px-4">
+            <TypingText />
+          </div>
 
-        {!isMenuOpen && (
           <motion.a
             href="#about"
             animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
@@ -38,8 +38,8 @@ export function Hero() {
           >
             <IoIosArrowDown className="text-4xl" />
           </motion.a>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 }

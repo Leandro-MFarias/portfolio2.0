@@ -25,7 +25,7 @@ export function TypingText() {
 
   return (
     <div className="flex flex-col space-y-4">
-      <p className="text-6xl font-semibold mr-20">
+      <p className="text-4xl sm:text-5xl md:text-6xl font-semibold md:mr-20">
         {principalText.split("").map((letter, index) => (
           <motion.span
             initial={{ opacity: 0 }}
@@ -84,7 +84,7 @@ export function TypingText() {
           </motion.span>
         ))}
       </p>
-      <p className="flex items-center text-5xl self-end">
+      <p className="flex items-center text-4xl md:text-5xl self-end">
         {secondaryText[secondary].split("").map((letter, index) => (
           <motion.span
             initial={{
