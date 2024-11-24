@@ -35,7 +35,7 @@ export function Social() {
   const copied = hasCopied ? "Copied!" : "copy";
 
   return (
-    <div className="flex items-center pr-20 space-x-8 text-3xl pl-6">
+    <div className="flex items-center justify-center lg:justify-start pr-20 space-x-8 text-3xl pl-6">
       {socials.map((social, index) => (
         <a
           href={social.link}

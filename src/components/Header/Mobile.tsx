@@ -82,14 +82,14 @@ export function Mobile() {
                   },
                 },
                 closed: {
-                  x: "-100%", // translateX(-100%)
+                  x: "-100%",
                   transition: {
                     type: "spring",
                     bounce: 0,
                     when: "afterChildren",
                   },
                 },
-              }} // Estamos apenas definando como parte do componente.
+              }}
               initial="closed" // Iniciando como fechado CHAMANDO
               animate="open" // ABRINDO QUANDO CLICAR CHAMANDO
               exit="closed" // Chama a animação quando fechar dnv
@@ -104,7 +104,7 @@ export function Mobile() {
                 <ul className="space-y-10">
                   {menuItems.map((li) => (
                     <motion.li key={li.label}>
-                      <a href={li.href} className="pl-6 inline-block text-4xl font-bold hover:scale-125 transition-all duration-300 ease-in-out">
+                      <a href={li.href} className="pl-6 inline-block text-4xl font-bold hover:scale-125 transition-all duration-300 ease-in-out" onClick={() => handleToggleMenu()}>
                         {li.label}
                       </a>
                     </motion.li>
