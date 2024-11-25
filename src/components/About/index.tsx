@@ -1,5 +1,5 @@
 import room from "../../assets/about-ia.jpg";
-import planet from "../../assets/quantum-moon.png";
+import planet from "../../assets/quantum-moon.svg";
 import { Social } from "../Social";
 
 export function About() {
@@ -31,12 +31,13 @@ export function About() {
         />
       </div>
 
-      <img
+      {/* <img
         src={planet}
         alt=""
-        className="hidden lg:block w-24 absolute -top-20 left-20 brightness-75"
-      />
+        className="hidden lg:block w-28 absolute -top-20 left-[800px] rounded-full"
+      /> */}
     </section>
   );
 }
+
 // rounded-tr-[30%] rounded-bl-[30%] rounded-tl-xl rounded-br-xl
