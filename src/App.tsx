@@ -6,7 +6,7 @@ import { MenuProvider } from "./context/menuContext";
 export function App() {
   return (
     <MenuProvider>
-      <div className="space-y-32">
+      <div className="space-y-24">
         <Hero />
         <About />
         <Projects />

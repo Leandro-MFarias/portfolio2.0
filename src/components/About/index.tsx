@@ -1,12 +1,11 @@
 import room from "../../assets/about-ia.jpg";
-import planet from "../../assets/quantum-moon.svg";
 import { Social } from "../Social";
 
 export function About() {
 
 
   return (
-    <section id="about" className="h-[80vh] relative pb-10 px-6">
+    <section id="about" className="lg:h-[80vh] relative px-6">
       <div className="flex flex-col lg:flex-row items-center justify-center space-x-8 space-y-6 tablet:space-y-0">
         <div className="space-y-10 xl:space-y-14">
           <h2 className="text-5xl font-bold">Sobre mim</h2>
@@ -31,11 +30,7 @@ export function About() {
         />
       </div>
 
-      {/* <img
-        src={planet}
-        alt=""
-        className="hidden lg:block w-28 absolute -top-20 left-[800px] rounded-full"
-      /> */}
+
     </section>
   );
 }
