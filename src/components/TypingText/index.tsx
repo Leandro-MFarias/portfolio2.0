@@ -64,7 +64,7 @@ export function TypingText() {
                 duration: boxFadeDuration,
                 ease: "easeInOut",
               }}
-              className="absolute bottom-[3px] left-[1px] right-0 top-[3px] bg-neutral-950"
+              className="absolute bottom-[3px] left-[1px] right-0 top-[3px] bg-sky-400"
             />
             <motion.span
               initial={{
@@ -128,7 +128,7 @@ export function TypingText() {
                 duration: boxFadeDuration,
                 ease: "easeInOut",
               }}
-              className="absolute bottom-[3px] left-[1px] right-0 top-[3px] bg-neutral-950"
+              className="absolute bottom-[3px] left-[1px] right-0 top-[3px] bg-sky-400"
             />
             <motion.span
               initial={{

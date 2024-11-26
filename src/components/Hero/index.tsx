@@ -1,4 +1,5 @@
-import bedRoom from "../../assets/bedroom2.0.gif";
+// import bedRoom from "../../assets/bedroom2.0.gif";
+import outer from "../../assets/outerWildsL.mp4";
 
 import { useMenu } from "../../context/menuContext";
 import { Header } from "../Header";
@@ -11,11 +12,14 @@ export function Hero() {
 
   return (
     <section className="relative h-screen">
-      <img
+      <video className="absolute w-full h-full object-cover object-center left-0 top-0 -z-50 brightness-50" loop autoPlay muted>
+        <source src={outer} type="video/mp4" />
+      </video>
+      {/* <img
         src={bedRoom}
         alt="Pixel art gif"
         className="absolute w-full h-full object-cover object-center left-0 top-0 -z-50 brightness-50"
-      />
+      /> */}
 
       <Header />
 
