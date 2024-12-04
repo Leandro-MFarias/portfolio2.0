@@ -2,27 +2,53 @@ import { motion } from "motion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
-import astronaut from "../../assets/astronaut.png";
-import cord from "../../assets/cordenadas.png";
-import eye from "../../assets/eye.png";
 import planet from "../../assets/quantum-moon.png";
+import astronaut from "../../assets/astronaut.png";
+
+import cinevault from "../../assets/cinevault-macbook.png";
+import ecommerce from "../../assets/e-commerce-macbook.png";
+import portfolio from "../../assets/portfolio-macbook.png";
+import searchAPI from "../../assets/searchAPI-macbook.png";
+import todoList from "../../assets/todoList-macbook.png";
+import weather from "../../assets/weatherApp-macbook.png";
 
 export function Projects() {
   const slides = [
     {
       title: "Projetos",
       description: "Aqui estão alguns dos meus projetos passados",
-      img: astronaut,
+      site: "https://cinevault-opal.vercel.app/",
+      img: cinevault,
     },
     {
       title: "Projetos",
       description: "Aqui estão alguns dos meus projetos passados",
-      img: cord,
+      site: "https://e-commerce-facul.vercel.app/",
+      img: ecommerce,
     },
     {
       title: "Projetos",
       description: "Aqui estão alguns dos meus projetos passados",
-      img: eye,
+      site: "https://weather-app-blond-nine-29.vercel.app/",
+      img: weather,
+    },
+    {
+      title: "Projetos",
+      description: "Aqui estão alguns dos meus projetos passados",
+      site: "https://to-do-list-zeta-roan.vercel.app/",
+      img: todoList,
+    },
+    {
+      title: "Projetos",
+      description: "Aqui estão alguns dos meus projetos passados",
+      site: "https://leandro-portfolio-topaz.vercel.app/",
+      img: portfolio,
+    },
+    {
+      title: "Projetos",
+      description: "Aqui estão alguns dos meus projetos passados",
+      site: "https://leandro-mfarias.github.io/search-github-api/",
+      img: searchAPI,
     },
   ];
 
@@ -68,18 +94,9 @@ export function Projects() {
                   <h2>{slide.title}</h2>
                   <p>{slide.description}</p>
                 </div>
-                <motion.img
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "easeInOut",
-                  }}
-                  src={slide.img}
-                  alt=""
-                  className="w-[430px] h-[530px] brightness-50 object-contain"
-                />
+                <a href={slide.site} target="_blank">
+                  <motion.img src={slide.img} alt="" className="w-[640px]" />
+                </a>
               </div>
               <img
                 src={planet}
