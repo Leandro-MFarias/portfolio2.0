@@ -1,6 +1,4 @@
-import { motion, useMotionValue, animate } from "motion/react";
-import useMeasure from "react-use-measure";
-import { useEffect } from "react";
+import { motion } from "motion/react";
 
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa6";
@@ -37,38 +35,43 @@ const list = [
 ];
 
 export function Skills() {
-  let [ref, { width }] = useMeasure();
-
-  const translation = useMotionValue(0);
-
-  useEffect(() => {
-    let controls;
-    let finalPosition = -width / 2 
-
-    controls = animate(translation, [0, finalPosition], {
-      ease: "linear",
-      duration: 5,
-      repeat: Infinity,
-      repeatType: "loop",
-    });
-
-    return controls.stop;
-
-  }, [translation, width]);
-
   return (
-    <div className="relative overflow-hidden border-2 border-x-0 py-6 max-w-max">
-      <motion.div
-        className="flex space-x-10 max-w-max"
-        ref={ref}
-        style={{ x: translation }}
-      >
-        {[...list, ...list].map((item, index) => (
-          <motion.div key={index} className="">
-            <span className="text-8xl max-w-max">{item.icon}</span>
-          </motion.div>
-        ))}
-      </motion.div>
+    <div className="overflow-hidden border-2 border-x-0 py-6">
+      <div className="flex space-x-10 MyGradient">
+        <motion.div
+          className="flex space-x-10 flex-shrink-0"
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {[...list, ...list].map((item, index) => (
+            <span key={index} className="text-8xl">
+              {item.icon}
+            </span>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="flex space-x-10 flex-shrink-0"
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {[...list, ...list].map((item, index) => (
+            <span key={index} className="text-8xl">
+              {item.icon}
+            </span>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 }
