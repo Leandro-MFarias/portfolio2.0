@@ -1,4 +1,6 @@
-
+import { motion, useMotionValue, animate } from "motion/react";
+import useMeasure from "react-use-measure";
+import { useEffect } from "react";
 
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa6";
@@ -14,9 +16,15 @@ import { SiSwagger } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 const list = [
-  { name: "React JS", icon: <FaReact className="text-sky-500"/> },
-  { name: "JavaScript", icon: <RiJavascriptFill className="text-yellow-400"/> },
-  { name: "Tailwind CSS", icon: <RiTailwindCssFill className="text-sky-500" /> },
+  { name: "React JS", icon: <FaReact className="text-sky-500" /> },
+  {
+    name: "JavaScript",
+    icon: <RiJavascriptFill className="text-yellow-400" />,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <RiTailwindCssFill className="text-sky-500" />,
+  },
   { name: "Jest", icon: <SiJest className="text-rose-700" /> },
   { name: "GIT", icon: <FaGitAlt className="text-orange-600" /> },
   { name: "Github", icon: <FaGithub className="text-purple-600" /> },
@@ -29,13 +37,38 @@ const list = [
 ];
 
 export function Skills() {
+  let [ref, { width }] = useMeasure();
+
+  const translation = useMotionValue(0);
+
+  useEffect(() => {
+    let controls;
+    let finalPosition = -width / 2 
+
+    controls = animate(translation, [0, finalPosition], {
+      ease: "linear",
+      duration: 5,
+      repeat: Infinity,
+      repeatType: "loop",
+    });
+
+    return controls.stop;
+
+  }, [translation, width]);
+
   return (
-    <div className="flex space-x-20">
-        {list.map((item) => (
-            <div className="flex flex-col items-center space-y-7">
-              <span className="text-8xl">{item.icon}</span>
-            </div>
+    <div className="relative overflow-hidden border-2 border-x-0 py-6 max-w-max">
+      <motion.div
+        className="flex space-x-10 max-w-max"
+        ref={ref}
+        style={{ x: translation }}
+      >
+        {[...list, ...list].map((item, index) => (
+          <motion.div key={index} className="">
+            <span className="text-8xl max-w-max">{item.icon}</span>
+          </motion.div>
         ))}
+      </motion.div>
     </div>
   );
 }
