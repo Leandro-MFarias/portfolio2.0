@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
+import { FaGithubAlt, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { copyToClipboard } from "../../helpers/copyToClipboard";
 
@@ -12,6 +12,10 @@ export function Social() {
     { name: <FaGithubAlt />, link: "https://github.com/Leandro-MFarias" },
     {
       name: <FaLinkedinIn />,
+      link: "https://www.linkedin.com/in/leandro-farias-dev/",
+    },
+    {
+      name: <FaWhatsapp />,
       link: "https://www.linkedin.com/in/leandro-farias-dev/",
     },
   ];
