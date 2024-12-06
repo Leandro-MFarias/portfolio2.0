@@ -7,15 +7,13 @@ import { ButtonEmail } from "../ButtonEmail";
 export function Footer() {
   return (
     <footer
-      className="relative h-[50vh] bg-black flex flex-col justify-center pl-32 space-y-4"
+      className="relative h-[50vh] bg-black flex flex-col justify-center pl-32 space-y-10"
       id="contact"
     >
-      <a href="hero" className="absolute flex items-center top-20 right-32">
-        Voltar ao topo
+      <div className="absolute flex items-center top-20 right-32">
+        <p>Voltar ao topo</p>
         <FaArrowUp className="text-black bg-zinc-50 text-4xl p-[10px] rounded-full cursor-pointer hover:scale-125 transition duration-200 ease-in-out ml-2" />
-      </a>
-
-      <p className="absolute top-20 ">&copy; Leandro Marinaci 2024</p>
+      </div>
 
       <div className="flex flex-col">
         <p className="pl-1.5 text-white leading-none">
@@ -26,7 +24,7 @@ export function Footer() {
         </h2>
       </div>
 
-      <div className="flex space-x-8">
+      <div className="flex space-x-8 pl-4">
         <Social types={"footer"} />
         <ButtonEmail types="footer">Email</ButtonEmail>
       </div>
