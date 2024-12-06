@@ -8,7 +8,7 @@ import { slides } from "./projectList";
 
 export function Projects() {
   return (
-    <section className="h-[60vh] pt-20" id="projects">
+    <section className="h-[68vh] py-20" id="projects">
       <div>
         <Swiper
           modules={[Pagination, EffectCoverflow]}
@@ -41,7 +41,6 @@ export function Projects() {
                   Aqui você encontrará alguns dos meus principais projetos,
                   criados para demonstrar minhas habilidades como desenvolvedor frontend, com foco em soluções inovadoras e funcionais.
                 </p>
-                <p></p>
               </div>
               <motion.img
                 animate={{ y: [0, 30, 0] }}
@@ -71,7 +70,7 @@ export function Projects() {
           </SwiperSlide>
 
           {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="pb-10 flex items-center">
+            <SwiperSlide key={index} className="flex items-center">
               <div className="flex flex-col md:flex-row items-center md:items-start justify-center xxl:space-x-20 py-20 space-y-4 md:space-y-0">
                 <div className="space-y-6 pl-6 xl:p-0">
                   <h2 className="text-4xl md:text-5xl font-semibold">{slide.title}</h2>
