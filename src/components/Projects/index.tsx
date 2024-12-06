@@ -8,7 +8,7 @@ import { slides } from "./projectList";
 
 export function Projects() {
   return (
-    <section className="h-[60vh] pt-20">
+    <section className="h-[60vh] pt-20" id="projects">
       <div className="">
         <Swiper
           modules={[Pagination, EffectCoverflow]}

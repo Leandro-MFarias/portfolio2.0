@@ -28,15 +28,15 @@ const list = [
   { name: "Github", icon: <FaGithub className="text-purple-600" /> },
   { name: "TypeScript", icon: <BiLogoTypescript className="text-blue-500" /> },
   { name: "Node.Js", icon: <FaNodeJs className="text-lime-500" /> },
-  { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
   { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" /> },
+  { name: "HTML5", icon: <FaHtml5 className="text-orange-600" /> },
   { name: "PostgreSQL", icon: <BiLogoPostgresql className="text-blue-700" /> },
   { name: "Swagger", icon: <SiSwagger className="text-lime-400" /> },
 ];
 
 export function Skills() {
   return (
-    <div className="overflow-hidden border-2 border-x-0 py-6">
+    <div className="overflow-hidden border-2 border-x-0 py-6" id="skills">
       <div className="flex space-x-10 MyGradient">
         <motion.div
           className="flex space-x-10 flex-shrink-0"
@@ -49,7 +49,7 @@ export function Skills() {
           }}
         >
           {[...list, ...list].map((item, index) => (
-            <span key={index} className="text-8xl">
+            <span key={index} className="text-[70px]">
               {item.icon}
             </span>
           ))}
@@ -66,7 +66,7 @@ export function Skills() {
           }}
         >
           {[...list, ...list].map((item, index) => (
-            <span key={index} className="text-8xl">
+            <span key={index} className="text-[70px]">
               {item.icon}
             </span>
           ))}
