@@ -1,8 +1,11 @@
 import room from "../../assets/about-ia.jpg";
+import { ButtonEmail } from "../ButtonEmail";
 import { Skills } from "../Skills";
 import { Social } from "../Social";
+import { MdOutlineEmail } from "react-icons/md";
 
 export function About() {
+
   return (
     <section id="about" className="lg:h-[80vh] relative px-6 space-y-24">
       <div className="flex flex-col lg:flex-row items-center justify-center space-x-8 space-y-6 tablet:space-y-0">
@@ -19,7 +22,12 @@ export function About() {
             responsiva.
           </p>
 
-          <Social />
+          <div className="flex space-x-8">
+            <Social types={"about"} />
+            <ButtonEmail>
+              <MdOutlineEmail />
+            </ButtonEmail>
+          </div>
         </div>
         <img
           src={room}
@@ -29,7 +37,6 @@ export function About() {
       </div>
 
       <Skills />
-
     </section>
   );
 }

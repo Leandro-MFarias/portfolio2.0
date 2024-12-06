@@ -1,35 +1,49 @@
-import { FaGithubAlt, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { ButtonEmail } from "../ButtonEmail";
-import { MdOutlineEmail } from "react-icons/md";
+import { tv } from "tailwind-variants";
 
-export function Social() {
-  const socials = [
-    { name: <FaGithubAlt />, link: "https://github.com/Leandro-MFarias" },
+import { FaGithubAlt, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+
+const links = tv({
+  variants: {
+    types: {
+      about:
+        "shadow-social p-3 rounded-xl text-3xl hover:scale-125 transition duration-300 ease-in-out",
+      footer:
+        "rounded-full border-2 border-white text-xl font-light px-10 py-3",
+    },
+  },
+});
+
+type SocialProps = {
+  types: "about" | "footer";
+};
+
+export function Social({ types }: SocialProps) {
+  const items = [
     {
-      name: <FaLinkedinIn />,
-      link: "https://www.linkedin.com/in/leandro-farias-dev/",
+      name: "Github",
+      icon: <FaGithubAlt />,
+      link: "https://github.com/Leandro-MFarias",
     },
     {
-      name: <FaWhatsapp />,
+      name: "LinkedIn",
+      icon: <FaLinkedinIn />,
       link: "https://www.linkedin.com/in/leandro-farias-dev/",
     },
+    { name: "WhatsApp", icon: <FaWhatsapp />, link: "https://w.app/ledev" },
   ];
 
   return (
-    <div className="flex items-center justify-center lg:justify-start pr-20 space-x-8">
-      {socials.map((social, index) => (
+    <div className="flex items-center justify-center lg:justify-start space-x-8">
+      {items.map((item, index) => (
         <a
-          href={social.link}
           key={index}
+          href={item.link}
           target="_blank"
-          className="shadow-social p-3 rounded-xl hover:scale-125 transition duration-300 ease-in-out text-3xl"
+          className={links({ types })}
         >
-          {social.name}
+          {types === "about" ? item.icon : item.name}
         </a>
       ))}
-      <ButtonEmail>
-        <MdOutlineEmail />
-      </ButtonEmail>
     </div>
   );
 }

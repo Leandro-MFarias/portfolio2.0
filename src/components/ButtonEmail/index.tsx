@@ -7,7 +7,7 @@ const button = tv({
   variants: {
     types: {
       about: 'shadow-social p-3 rounded-xl text-3xl',
-      footer: 'rounded-2xl bg-lime-300'
+      footer: 'rounded-full border-2 border-white text-xl font-light px-10 py-3'
     },
   },
   defaultVariants: {
