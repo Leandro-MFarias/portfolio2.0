@@ -8,6 +8,11 @@ export default {
     extend: {
       boxShadow: {
         social: "inset 3px 3px 3px #707070, inset -3px -3px 3px #454545"
+      },
+      screens: {
+        'xxl': '1700px',
+        'xl2': '1400px',
+        'xl3': '1366px',
       }
     },
   },

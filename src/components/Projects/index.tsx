@@ -9,7 +9,7 @@ import { slides } from "./projectList";
 export function Projects() {
   return (
     <section className="h-[60vh] pt-20" id="projects">
-      <div className="">
+      <div>
         <Swiper
           modules={[Pagination, EffectCoverflow]}
           pagination={{ clickable: true }}
@@ -34,10 +34,10 @@ export function Projects() {
           }
         >
           <SwiperSlide>
-            <div className="flex justify-center space-x-28">
-              <div className="space-y-10 mt-10">
-                <h2 className="text-5xl font-bold">Meus Projetos</h2>
-                <p className="text-xl max-w-xl leading-8">
+            <div className="flex flex-col sm:flex-row justify-center items-center md:items-start lg:space-x-28">
+              <div className="space-y-10 mt-10 sm:pl-6 xl:p-0">
+                <h2 className="sm:p-2 xl2:p-0 pl-10 md:pl-2 text-5xl font-bold">Meus Projetos</h2>
+                <p className="hidden sm:block max-w-2xl md:text-xl md:max-w-xl leading-8 md:bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0 pl-10 md:pl-2">
                   Aqui você encontrará alguns dos meus principais projetos,
                   criados para demonstrar minhas habilidades como desenvolvedor frontend, com foco em soluções inovadoras e funcionais.
                 </p>
@@ -53,7 +53,7 @@ export function Projects() {
                 }}
                 src={astronaut}
                 alt=""
-                className="w-[430px] h-[530px] brightness-50 object-contain"
+                className="w-[360px] h-[510px] md:w-[430px] md:h-[530px] brightness-50 object-contain"
               />
             </div>
             <motion.img
@@ -71,15 +71,15 @@ export function Projects() {
           </SwiperSlide>
 
           {slides.map((slide, index) => (
-            <SwiperSlide key={index} className="pb-10">
-              <div className="flex justify-center space-x-40 py-20">
-                <div className="space-y-6">
-                  <h2 className="text-5xl font-semibold">{slide.title}</h2>
-                  <p className="max-w-lg leading-7 text-lg">{slide.description}</p>
-                  <p className="text-xl font-light">Tecnologias Utilizadas: {slide.tecnologias}</p>
+            <SwiperSlide key={index} className="pb-10 flex items-center">
+              <div className="flex flex-col md:flex-row items-center md:items-start justify-center xxl:space-x-20 py-20 space-y-4 md:space-y-0">
+                <div className="space-y-6 pl-6 xl:p-0">
+                  <h2 className="text-4xl md:text-5xl font-semibold">{slide.title}</h2>
+                  <p className="hidden md:block max-w-xl leading-7 md:text-lg bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0">{slide.description}</p>
+                  <p className="hidden md:block md:text-xl font-light"><span className="font-bold">Tecnologias Utilizadas</span>: {slide.tecnologias}</p>
                 </div>
                 <a target="_blank">
-                  <motion.img src={slide.img} alt="" className="w-[740px]" />
+                  <motion.img src={slide.img} alt="" className="md:w-[630px] xl2:w-[740px]" />
                 </a>
               </div>
             </SwiperSlide>
