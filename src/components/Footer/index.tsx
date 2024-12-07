@@ -12,7 +12,9 @@ export function Footer() {
     >
       <div className="absolute flex items-center top-20 right-32">
         <p>Voltar ao topo</p>
-        <FaArrowUp className="text-black bg-zinc-50 text-4xl p-[10px] rounded-full cursor-pointer hover:scale-125 transition duration-200 ease-in-out ml-2" />
+        <a href="#hero">
+          <FaArrowUp className="text-black bg-zinc-50 text-4xl p-[10px] rounded-full cursor-pointer hover:scale-125 transition duration-200 ease-in-out ml-2" />
+        </a>
       </div>
 
       <div className="flex flex-col">

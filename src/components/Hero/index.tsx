@@ -11,7 +11,7 @@ export function Hero() {
   const { isMenuOpen } = useMenu();
 
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen" id="hero">
       <video className="absolute w-full h-full object-cover object-center left-0 top-0 -z-50 brightness-50" loop autoPlay muted>
         <source src={outer} type="video/mp4" />
       </video>
