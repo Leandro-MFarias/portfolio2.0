@@ -3,12 +3,13 @@ import { tv } from "tailwind-variants";
 import { FaGithubAlt, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const links = tv({
+  base: 'transition duration-300 ease-in-out', 
   variants: {
     types: {
       about:
-        "shadow-social p-3 rounded-xl text-3xl hover:scale-125 transition duration-300 ease-in-out",
+        "hover:scale-125 shadow-social p-3 rounded-xl text-3xl",
       footer:
-        "rounded-full border-2 border-white text-xl font-light px-10 py-3",
+        "hover:scale-110 rounded-full border-2 border-white text-xl font-light px-10 py-3",
     },
   },
 });
