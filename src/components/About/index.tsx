@@ -24,7 +24,7 @@ export function About() {
 
           <div className="flex space-x-8">
             <Social types={"about"} />
-            <ButtonEmail>
+            <ButtonEmail types="about" typesCopy="aboutFalse">
               <MdOutlineEmail />
             </ButtonEmail>
           </div>

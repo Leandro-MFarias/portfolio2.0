@@ -28,13 +28,13 @@ export function Footer() {
 
       <div className="flex space-x-8 pl-4">
         <Social types={"footer"} />
-        <ButtonEmail types="footer">Email</ButtonEmail>
+        <ButtonEmail types="footer" typesCopy="footerFalse">Email</ButtonEmail>
       </div>
 
       <img
         src={eye}
         alt=""
-        className="absolute right-32 bottom-6 w-[180px] object-cover"
+        className="absolute right-28 bottom-6 w-[180px] object-cover"
       />
     </footer>
   );

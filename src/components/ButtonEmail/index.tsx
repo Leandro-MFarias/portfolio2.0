@@ -1,25 +1,39 @@
 import { useEffect, useRef, useState } from "react";
-import { tv, VariantProps } from 'tailwind-variants'
+import { tv, VariantProps } from "tailwind-variants";
 import { copyToClipboard } from "../../helpers/copyToClipboard";
 
 const button = tv({
   base: "relative transition duration-200 ease-in-out group",
   variants: {
     types: {
-      about: 'hover:scale-125 shadow-social p-3 rounded-xl text-3xl',
-      footer: 'hover:scale-110 rounded-full border-2 border-white text-xl font-light px-10 py-3'
+      about: "hover:scale-125 shadow-social p-3 rounded-xl text-3xl",
+      footer:
+        "hover:scale-110 rounded-full border-2 border-white text-xl font-light px-10 py-3",
     },
   },
   defaultVariants: {
-    types: 'about'
-  }
-})
+    types: "about",
+  },
+});
+
+const textCopy = tv({
+  base: "absolute text-sm -top-6 font-semibold opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100",
+  variants: {
+    typesCopy: {
+      aboutTrue: "-left-0",
+      aboutFalse: "left-[11px]",
+      footerTrue: "left-8",
+      footerFalse: "left-12",
+    },
+  },
+});
 
 type ButtonEmailProps = {
-  children: React.ReactNode
-} & VariantProps<typeof button>
+  children: React.ReactNode;
+  typesCopy?: VariantProps<typeof textCopy>["typesCopy"];
+} & VariantProps<typeof button>;
 
-export function ButtonEmail({children, types}: ButtonEmailProps) {
+export function ButtonEmail({ children, types, typesCopy }: ButtonEmailProps) {
   const [hasCopied, setHasCopied] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
@@ -42,15 +56,14 @@ export function ButtonEmail({children, types}: ButtonEmailProps) {
 
   const copied = hasCopied ? "Copied!" : "copy";
 
+  const textCopyVariant =
+    typesCopy ??
+    (types ? `${types}${hasCopied ? "True" : "False"}` : undefined)
+
   return (
-    <button
-      onClick={handleCopy}
-      className={button({types})}
-    >
+    <button onClick={handleCopy} className={button({ types })}>
       <span
-        className={`absolute text-sm -top-6 font-semibold opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 ${
-          hasCopied ? "left-0" : "left-[11px]"
-        }`}
+        className={textCopy({ typesCopy: textCopyVariant })}
       >
         {copied}
       </span>

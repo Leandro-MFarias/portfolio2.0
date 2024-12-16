@@ -40,8 +40,8 @@ export function Skills() {
       <div className="flex space-x-10 MyGradient">
         <motion.div
           className="flex space-x-10 flex-shrink-0"
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
           transition={{
             duration: 15,
             repeat: Infinity,
@@ -57,8 +57,8 @@ export function Skills() {
 
         <motion.div
           className="flex space-x-10 flex-shrink-0"
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
           transition={{
             duration: 15,
             repeat: Infinity,
