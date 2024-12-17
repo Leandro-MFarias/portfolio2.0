@@ -9,7 +9,7 @@ const links = tv({
       about:
         "hover:scale-125 shadow-social p-3 rounded-xl text-3xl",
       footer:
-        "hover:scale-110 rounded-full border-2 border-white text-xl font-light px-10 py-3",
+        "hover:scale-110 rounded-full border-2 border-white text-sm sm:text-base xl:text-xl font-light px-6 xl:px-10 py-3",
     },
   },
 });
@@ -34,7 +34,7 @@ export function Social({ types }: SocialProps) {
   ];
 
   return (
-    <div className="flex items-center justify-center lg:justify-start space-x-8">
+    <div className="flex items-center justify-center lg:justify-start space-x-2 sm:space-x-8">
       {items.map((item, index) => (
         <a
           key={index}

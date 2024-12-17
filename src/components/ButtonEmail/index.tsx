@@ -8,7 +8,7 @@ const button = tv({
     types: {
       about: "hover:scale-125 shadow-social p-3 rounded-xl text-3xl",
       footer:
-        "hover:scale-110 rounded-full border-2 border-white text-xl font-light px-10 py-3",
+        "hover:scale-110 rounded-full border-2 border-white text-sm sm:text-base xl:text-xl font-light px-8 xl:px-10 py-3",
     },
   },
   defaultVariants: {

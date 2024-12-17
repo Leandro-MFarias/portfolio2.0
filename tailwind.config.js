@@ -13,6 +13,7 @@ export default {
         'xxl': '1700px',
         'xl2': '1400px',
         'xl3': '1366px',
+        'sl1': '560px',
       }
     },
   },
