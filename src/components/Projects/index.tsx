@@ -37,7 +37,7 @@ export function Projects() {
             <div className="flex flex-col sm:flex-row justify-center items-center md:items-start lg:space-x-28">
               <div className="space-y-10 mt-10 sm:pl-6 xl:p-0">
                 <h2 className="sm:p-2 xl2:p-0 pl-10 md:pl-2 text-5xl font-bold">Meus Projetos</h2>
-                <p className="hidden sm:block max-w-2xl md:text-xl md:max-w-xl leading-8 md:bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0 pl-10 md:pl-2">
+                <p className="hidden sm:block max-w-2xl md:text-xl md:max-w-xl md:bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0 pl-10 md:pl-2 md:leading-loose">
                   Aqui você encontrará alguns dos meus principais projetos,
                   criados para demonstrar minhas habilidades como desenvolvedor frontend, com foco em soluções inovadoras e funcionais.
                 </p>
@@ -74,7 +74,7 @@ export function Projects() {
               <div className="flex flex-col md:flex-row items-center md:items-start justify-center xxl:space-x-20 py-20 space-y-4 md:space-y-0">
                 <div className="space-y-6 pl-6 xl:p-0">
                   <h2 className="text-4xl md:text-5xl font-semibold">{slide.title}</h2>
-                  <p className="hidden md:block max-w-xl leading-7 md:text-lg bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0">{slide.description}</p>
+                  <p className="hidden md:block max-w-xl md:leading-loose md:text-lg bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0">{slide.description}</p>
                   <p className="hidden md:block md:text-xl font-light"><span className="font-bold">Tecnologias Utilizadas</span>: {slide.tecnologias}</p>
                 </div>
                 <a target="_blank">

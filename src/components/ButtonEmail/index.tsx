@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { tv, VariantProps } from "tailwind-variants";
+import { motion, useInView } from 'motion/react'
 import { copyToClipboard } from "../../helpers/copyToClipboard";
 
 const button = tv({
@@ -37,6 +38,12 @@ export function ButtonEmail({ children, types, typesCopy }: ButtonEmailProps) {
   const [hasCopied, setHasCopied] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
+  const ref = useRef(null)
+  const inView = useInView(ref, {
+    margin: '0px 0px -80px 0px',
+    once: true
+  })
+
   const email = "leandrorf1606@gmail.com";
 
   useEffect(() => {
@@ -61,13 +68,26 @@ export function ButtonEmail({ children, types, typesCopy }: ButtonEmailProps) {
     (types ? `${types}${hasCopied ? "True" : "False"}` : undefined)
 
   return (
-    <button onClick={handleCopy} className={button({ types })}>
+    <motion.button 
+      onClick={handleCopy} 
+      className={button({ types })}
+      ref={ref} 
+      animate={{
+        y: inView ? 0 : "80%", 
+        opacity: inView ? [0, 0.1, 1] : 0 
+      }}
+      transition={{
+        duration: 0.4,
+        ease: "linear",
+        delay: 1.4,
+      }}
+    >
       <span
         className={textCopy({ typesCopy: textCopyVariant })}
       >
         {copied}
       </span>
       {children}
-    </button>
+    </motion.button>
   );
 }

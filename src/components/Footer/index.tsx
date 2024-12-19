@@ -1,5 +1,6 @@
 import { Social } from "../Social";
 import { FaArrowUp } from "react-icons/fa6";
+import { GiAnglerFish } from "react-icons/gi";
 
 import eye from "../../assets/eye.png";
 import { ButtonEmail } from "../ButtonEmail";

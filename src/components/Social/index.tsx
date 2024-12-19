@@ -1,6 +1,9 @@
 import { tv } from "tailwind-variants";
+import { motion, useInView } from 'motion/react'
+
 
 import { FaGithubAlt, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { useRef } from "react";
 
 const links = tv({
   base: 'transition duration-300 ease-in-out', 
@@ -19,6 +22,12 @@ type SocialProps = {
 };
 
 export function Social({ types }: SocialProps) {
+  const ref = useRef(null)
+  const inView = useInView(ref, {
+    margin: '0px 0px -100px 0px',
+    once: true
+  })
+
   const items = [
     {
       name: "Github",
@@ -34,16 +43,25 @@ export function Social({ types }: SocialProps) {
   ];
 
   return (
-    <div className="flex items-center justify-center lg:justify-start space-x-2 sm:space-x-8">
+    <div className="flex items-center justify-center lg:justify-start space-x-2 sm:space-x-8" ref={ref}>
       {items.map((item, index) => (
-        <a
+        <motion.a
           key={index}
           href={item.link}
           target="_blank"
           className={links({ types })}
+          animate={{
+            y: inView ? 0 : '80%',
+            opacity: inView ? [0, 0.1, 1] : 0
+          }}
+          transition={{
+            duration: 0.4,
+            ease: 'linear',
+            delay: 0.4 + index * 0.4
+          }}
         >
           {types === "about" ? item.icon : item.name}
-        </a>
+        </motion.a>
       ))}
     </div>
   );
