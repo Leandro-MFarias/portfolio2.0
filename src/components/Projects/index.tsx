@@ -68,7 +68,7 @@ export function Projects() {
                   ease: "easeInOut",
                 }}
                 src={astronaut}
-                alt=""
+                alt="Astronauta de Outer Wilds"
                 className="w-[360px] h-[510px] md:w-[430px] md:h-[530px] brightness-50 object-contain"
               />
             </div>
@@ -94,8 +94,8 @@ export function Projects() {
                   <p className="hidden md:block max-w-xl md:leading-loose md:text-lg bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0">{slide.description}</p>
                   <p className="hidden md:block md:text-xl font-light"><span className="font-bold">Tecnologias Utilizadas</span>: {slide.tecnologias}</p>
                 </div>
-                <a target="_blank">
-                  <motion.img src={slide.img} alt="" className="md:w-[630px] xl2:w-[740px]" />
+                <a href={slide.site} target="_blank">
+                  <motion.img src={slide.img} alt="Imagem do site" className="md:w-[630px] xl2:w-[740px]" />
                 </a>
               </div>
             </SwiperSlide>

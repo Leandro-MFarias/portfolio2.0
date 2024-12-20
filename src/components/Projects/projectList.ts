@@ -1,6 +1,5 @@
 import cinevault from "../../assets/cinevault-macbook.png";
 import ecommerce from "../../assets/e-commerce-macbook.png";
-import portfolio from "../../assets/portfolio-macbook.png";
 import searchAPI from "../../assets/searchAPI-macbook.png";
 import todoList from "../../assets/todoList-macbook.png";
 import weather from "../../assets/weatherApp-macbook.png";

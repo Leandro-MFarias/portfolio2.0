@@ -20,7 +20,7 @@ export function Footer() {
       ref={ref}
     >
       <motion.div 
-        className="absolute flex items-center top-20 right-8 xl:right-32"
+        className="absolute flex items-center top-20 right-8 xl:right-32 overflow-hidden"
         animate={{
           x: inView ? 0 : '30%',
           opacity: inView ? 1 : 0
@@ -36,9 +36,9 @@ export function Footer() {
         </a>
       </motion.div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col overflow-hidden">
         <motion.p 
-          className="pl-1.5 text-white leading-none"
+          className="pl-1.5 text-white leading-none overflow-hidden"
           animate={{
             x: inView ? 0 : '-40%',
             opacity: inView ? 1 : 0
@@ -51,7 +51,7 @@ export function Footer() {
           Tem um projeto em mente?
         </motion.p>
         <motion.h2 
-          className="text-7xl md:text-8xl lg:text-9xl text-neutral-400 font-bold tracking-wider"
+          className="text-7xl md:text-8xl lg:text-9xl text-neutral-400 font-bold tracking-wider overflow-hidden"
           animate={{
             x: inView ? 0 : '-40%',
             opacity: inView ? 1 : 0
@@ -74,15 +74,15 @@ export function Footer() {
       <motion.img
         src={eye}
         alt=""
-        className="absolute right-36 sl1:right-48 sm:right-4 xl:right-28 bottom-0 sm:bottom-6 w-[180px] object-cover"
+        className="absolute right-36 sl1:right-48 sm:right-4 xl:right-28 bottom-0 sm:bottom-6 w-[180px] object-cover overflow-hidden"
         animate={{
-          x: inView ? 0 : '120%',
+          x: inView ? 0 : '60%',
           opacity: inView ? 1 : 0
         }}
         transition={{
           duration: 0.4,
           ease: 'linear',
-          delay: 0.6
+          delay: 1
         }}
       />
     </footer>
