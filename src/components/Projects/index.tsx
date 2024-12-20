@@ -1,15 +1,32 @@
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 import planet from "../../assets/quantum-moon.png";
 import astronaut from "../../assets/astronaut.png";
 import { slides } from "./projectList";
+import { useRef } from "react";
 
 export function Projects() {
+  const ref = useRef(null);
+  const inView = useInView(ref, {
+    margin: "0px 0px -100px 0px",
+    once: false,
+  });
+
   return (
     <section className="h-[68vh] py-20" id="projects">
-      <div>
+      <motion.div
+        ref={ref}
+        animate={{
+          x: inView ? 0 : '-60%',
+          opacity: inView ? [0, 0.4, 1] : 0
+        }}
+        transition={{
+          duration: 0.8,
+          ease: 'linear'
+        }}
+      >
         <Swiper
           modules={[Pagination, EffectCoverflow]}
           pagination={{ clickable: true }}
@@ -84,7 +101,7 @@ export function Projects() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -60,7 +60,7 @@ export function Social({ types }: SocialProps) {
             delay: 0.4 + index * 0.4,
           }}
           whileHover={{
-            scale: 1.25,
+            scale: 1.15,
             transition: {
               duration: 0.2,
               ease: "easeInOut",
