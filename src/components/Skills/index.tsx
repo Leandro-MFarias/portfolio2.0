@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa6";
@@ -12,6 +12,7 @@ import { SiJest } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiSwagger } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { useRef } from "react";
 
 const list = [
   { name: "React JS", icon: <FaReact className="text-sky-500" /> },
@@ -35,8 +36,26 @@ const list = [
 ];
 
 export function Skills() {
+  const ref = useRef(null);
+  const inView = useInView(ref, {
+    margin: "0px 0px -100px 0px",
+    once: true,
+  });
+
   return (
-    <div className="overflow-hidden border-2 border-x-0 py-6" id="skills">
+    <motion.div 
+      className="overflow-hidden border-2 border-x-0 py-6" 
+      id="skills" 
+      ref={ref}
+      animate={{
+        y: inView ? 0 : "80%",
+        opacity: inView ? [0, 0.1, 1] : 0,
+      }}
+      transition={{
+        duration: 0.2,
+        ease: "linear",
+      }}
+    >
       <div className="flex space-x-10 MyGradient">
         <motion.div
           className="flex space-x-10 flex-shrink-0"
@@ -72,6 +91,6 @@ export function Skills() {
           ))}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

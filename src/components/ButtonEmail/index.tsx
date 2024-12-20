@@ -4,12 +4,12 @@ import { motion, useInView } from 'motion/react'
 import { copyToClipboard } from "../../helpers/copyToClipboard";
 
 const button = tv({
-  base: "relative transition duration-200 ease-in-out group",
+  base: "relative group",
   variants: {
     types: {
-      about: "hover:scale-125 shadow-social p-3 rounded-xl text-3xl",
+      about: "shadow-social p-3 rounded-xl text-3xl",
       footer:
-        "hover:scale-110 rounded-full border-2 border-white text-sm sm:text-base xl:text-xl font-light px-8 xl:px-10 py-3",
+        "rounded-full border-2 border-white text-sm sm:text-base xl:text-xl font-light px-8 xl:px-10 py-3",
     },
   },
   defaultVariants: {
@@ -77,9 +77,17 @@ export function ButtonEmail({ children, types, typesCopy }: ButtonEmailProps) {
         opacity: inView ? [0, 0.1, 1] : 0 
       }}
       transition={{
-        duration: 0.4,
+        duration: 0.2,
         ease: "linear",
         delay: 1.4,
+      }}
+      whileHover={{
+        scale: 1.25,
+        transition: {
+          duration: 0.2,
+          ease: "easeInOut",
+          delay: 0
+        },
       }}
     >
       <span
