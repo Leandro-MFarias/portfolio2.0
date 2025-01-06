@@ -52,12 +52,13 @@ export function Projects() {
         >
           <SwiperSlide>
             <div className="flex flex-col sm:flex-row justify-center items-center md:items-start lg:space-x-28">
-              <div className="space-y-10 mt-10 sm:pl-6 xl:p-0">
+              <div className="flex flex-col mt-10 space-y-10 sm:pl-6 xl:p-0">
                 <h2 className="sm:p-2 xl2:p-0 pl-10 md:pl-2 text-5xl font-bold">Meus Projetos</h2>
                 <p className="hidden sm:block max-w-2xl md:text-xl md:max-w-xl md:bg-black xl2:bg-transparent rounded-2xl p-2 xl2:p-0 pl-10 md:pl-2 md:leading-loose">
                   Aqui você encontrará alguns dos meus principais projetos,
                   criados para demonstrar minhas habilidades como desenvolvedor frontend, com foco em soluções inovadoras e funcionais.
                 </p>
+                <span className="text-purple-500 text-lg font-semibold">Para visualizar o projeto completo basta clicar na imagem do projeto!</span>
               </div>
               <motion.img
                 animate={{ y: [0, 30, 0] }}
