@@ -1,6 +1,6 @@
-<h1 align="center">Portfolio Pessoal 🚀</h1> 
+<h1 align="center">Portfolio Pessoal 🚀</h1>
 
-<h2>📜 Descrição do Projeto </h2> 
+<h2>📜 Descrição do Projeto </h2>
 
 <p align="justify">
 Bem-vindo ao meu Portfolio Pessoal! 
@@ -10,11 +10,8 @@ Este projeto foi desenvolvido para apresentar minhas habilidades como desenvolve
 ### ✨ **Destaques do Portfolio**
 
 - **Design Atraente e Personalizado**: Um layout moderno e visualmente impactante que reflete minha personalidade e meu progresso como desenvolvedor.
-  
 - **Animações Dinâmicas com Framer Motion**: Utilizei a biblioteca Framer Motion para adicionar animações suaves e interativas, proporcionando uma experiência mais imersiva aos usuários.
-  
 - **Responsividade com CSS**: O site foi projetado para oferecer uma experiência perfeita em dispositivos móveis, tablets e desktops, garantindo acessibilidade em todos os tamanhos de tela.
-  
 - **Seção de Projetos**: Uma vitrine que destaca meus principais projetos, com detalhes sobre cada um, as tecnologias utilizadas e links para repositórios e demos.
 
 ---
