@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+<h1 align="center">Portfolio Pessoal 🚀</h1> 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>📜 Descrição do Projeto </h2> 
 
-Currently, two official plugins are available:
+<p align="justify">
+Bem-vindo ao meu Portfolio Pessoal! 
+Este projeto foi desenvolvido para apresentar minhas habilidades como desenvolvedor web e destacar os projetos que já realizei. Utilizando as tecnologias mais recentes e animações modernas, meu objetivo é proporcionar uma experiência visual agradável, dinâmica e responsiva. O portfolio está sempre em evolução, e continuarei atualizando-o à medida que aprendo novas ferramentas e aprimoro minhas competências.
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✨ **Destaques do Portfolio**
 
-## Expanding the ESLint configuration
+- **Design Atraente e Personalizado**: Um layout moderno e visualmente impactante que reflete minha personalidade e meu progresso como desenvolvedor.
+  
+- **Animações Dinâmicas com Framer Motion**: Utilizei a biblioteca Framer Motion para adicionar animações suaves e interativas, proporcionando uma experiência mais imersiva aos usuários.
+  
+- **Responsividade com CSS**: O site foi projetado para oferecer uma experiência perfeita em dispositivos móveis, tablets e desktops, garantindo acessibilidade em todos os tamanhos de tela.
+  
+- **Seção de Projetos**: Uma vitrine que destaca meus principais projetos, com detalhes sobre cada um, as tecnologias utilizadas e links para repositórios e demos.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+### 🚀 **Tecnologias Utilizadas**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+<div>
+    <img src="https://img.shields.io/badge/React-0c1014?style=for-the-badge&logo=react">
+    <img src="https://img.shields.io/badge/TS-0c1014?style=for-the-badge&logo=typescript">
+    <img src="https://img.shields.io/badge/TailwindCSS-0c1014?style=for-the-badge&logo=tailwindcss">
+    <img src="https://img.shields.io/badge/Framer_Motion-0c1014?style=for-the-badge&logo=framer">
+</div>
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 📸 **Preview do Portfolio**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+<img src="public/portfolio-macbook.png" alt="Demonstração do Portfolio">
