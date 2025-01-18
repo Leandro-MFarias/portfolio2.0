@@ -3,6 +3,7 @@ import ecommerce from "../../assets/e-commerce-macbook.png";
 import searchAPI from "../../assets/searchAPI-macbook.png";
 import todoList from "../../assets/todoList-macbook.png";
 import weather from "../../assets/weatherApp-macbook.png";
+import financa from "../../assets/financeiro.png"
 
 export const slides = [
   {
@@ -24,7 +25,7 @@ export const slides = [
     description: "Este é um sistema financeiro desenvolvido com React, TypeScript e Tailwind CSS. Ele permite gerenciar receitas e despesas, exibindo uma tabela de transações filtradas por mês. É possível adicionar e remover itens, calcular o balanço financeiro e alternar entre meses. O projeto utiliza hooks, gerenciamento de estado e funções auxiliares para formatação de datas e valores.",
     tecnologias: 'React, TypeScript, Tailwind CSS',
     site: "https://financial-management-drab.vercel.app/",
-    img: ecommerce,
+    img: financa,
   },
   {
     title: "Weather App",
