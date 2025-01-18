@@ -15,7 +15,7 @@ export function Projects() {
   });
 
   return (
-    <section className="h-[68vh] py-20" id="projects">
+    <section className="h-[78vh] py-20" id="projects">
       <motion.div
         ref={ref}
         animate={{
