@@ -20,6 +20,13 @@ export const slides = [
     img: ecommerce,
   },
   {
+    title: "Sistema Financeiro",
+    description: "Este é um sistema financeiro desenvolvido com React, TypeScript e Tailwind CSS. Ele permite gerenciar receitas e despesas, exibindo uma tabela de transações filtradas por mês. É possível adicionar e remover itens, calcular o balanço financeiro e alternar entre meses. O projeto utiliza hooks, gerenciamento de estado e funções auxiliares para formatação de datas e valores.",
+    tecnologias: 'React, TypeScript, Tailwind CSS',
+    site: "https://financial-management-drab.vercel.app/",
+    img: ecommerce,
+  },
+  {
     title: "Weather App",
     description: "Website de previsão do tempo, integrando a API OpenWeatherMap para buscar informações sobre o clima em tempo real. Com ele, é possível visualizar o clima atual e a previsão para os próximos 5 dias. O aplicativo também permite pesquisar cidades manualmente ou por meio de botões predefinidos.",
     tecnologias: "React, JavaScript, e Tailwind CSS",
